@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../guigu_mp/guigu_mp.iml" filepath="$PROJECT_DIR$/../guigu_mp/guigu_mp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_common/guli_common.iml" filepath="$PROJECT_DIR$/guli_common/guli_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_parent.iml" filepath="$PROJECT_DIR$/guli_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_teacher/guli_teacher.iml" filepath="$PROJECT_DIR$/guli_teacher/guli_teacher.iml" />
+    </modules>
+  </component>
+</project>
