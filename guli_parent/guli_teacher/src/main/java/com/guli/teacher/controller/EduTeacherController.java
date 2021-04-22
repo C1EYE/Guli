@@ -10,9 +10,12 @@ import com.guli.teacher.exception.EduException;
 import com.guli.teacher.service.EduTeacherService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -25,10 +28,12 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/teacher")
+@CrossOrigin
 public class EduTeacherController {
 
     @Autowired
     private EduTeacherService eduTeacherService;
+
 
     /**
      * 所有讲师
@@ -58,7 +63,7 @@ public class EduTeacherController {
 
 
     @ApiOperation(value = "分页讲师列表")
-    @GetMapping("/{page}/{limit}")
+    @PostMapping("/{page}/{limit}")
     public Result selectTeacherByPageAndWrapper(
             @ApiParam(name = "page", value = "当前页码", required = true)
             @PathVariable Long page,
@@ -66,15 +71,16 @@ public class EduTeacherController {
             @ApiParam(name = "limit", value = "每页记录数", required = true)
             @PathVariable Long limit,
             @ApiParam(name = "teacherQuery", value = "查询对象", required = false)
-                    TeacherQuery teacherQuery) {
+            @RequestBody TeacherQuery teacherQuery
+    ) {
 
+        System.out.println(teacherQuery);
         Page<EduTeacher> pageParam = new Page<>(page, limit);
 
         eduTeacherService.pageQuery(pageParam, teacherQuery);
         List<EduTeacher> records = pageParam.getRecords();
         long total = pageParam.getTotal();
-
-        return Result.ok().data("total", total).data("rows", records);
+        return Result.ok().data("total", total).data("rows", records).data("Access-Control-Allow-Origin", "*");
     }
 
 
@@ -124,7 +130,7 @@ public class EduTeacherController {
 //        }
 //    }
     @ApiOperation(value = "根据ID修改讲师")
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public Result updateById(
             @ApiParam(name = "id", value = "讲师ID", required = true)
             @PathVariable String id,

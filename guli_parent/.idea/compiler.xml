@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="guigu_oss" />
         <module name="guigu_mp" />
         <module name="guli_common" />
         <module name="guli_teacher" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="guigu_mp" target="1.8" />
+      <module name="guigu_oss" target="1.8" />
       <module name="guli_common" target="1.8" />
       <module name="guli_parent" target="1.8" />
       <module name="guli_teacher" target="1.8" />
@@ -22,6 +24,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="guigu_mp" options="-parameters" />
+      <module name="guigu_oss" options="-parameters" />
       <module name="guli_common" options="-parameters" />
       <module name="guli_parent" options="-parameters" />
       <module name="guli_teacher" options="-parameters" />
