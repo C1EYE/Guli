@@ -6,6 +6,10 @@
         <module>guli_teacher</module>
         <module>../guigu_mp</module>
         <module>guli_common</module>
+        <module>guli_oss</module>
+        <module>guli_oss</module>
+        <module>guli_oss</module>
+        <module>../guigu_poi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

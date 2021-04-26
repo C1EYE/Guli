@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../guigu_mp/guigu_mp.iml" filepath="$PROJECT_DIR$/../guigu_mp/guigu_mp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guigu_oss/guigu_oss.iml" filepath="$PROJECT_DIR$/../guigu_oss/guigu_oss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guigu_poi/guigu_poi.iml" filepath="$PROJECT_DIR$/../guigu_poi/guigu_poi.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_common/guli_common.iml" filepath="$PROJECT_DIR$/guli_common/guli_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_oss/guli_oss.iml" filepath="$PROJECT_DIR$/guli_oss/guli_oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_parent.iml" filepath="$PROJECT_DIR$/guli_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_teacher/guli_teacher.iml" filepath="$PROJECT_DIR$/guli_teacher/guli_teacher.iml" />
     </modules>

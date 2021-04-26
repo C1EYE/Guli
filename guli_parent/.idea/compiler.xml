@@ -10,13 +10,17 @@
         <module name="guigu_oss" />
         <module name="guigu_mp" />
         <module name="guli_common" />
+        <module name="guli_oss" />
         <module name="guli_teacher" />
+        <module name="guigu_poi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="guigu_mp" target="1.8" />
-      <module name="guigu_oss" target="1.8" />
+      <module name="guigu_oss" target="1.5" />
+      <module name="guigu_poi" target="1.8" />
       <module name="guli_common" target="1.8" />
+      <module name="guli_oss" target="1.8" />
       <module name="guli_parent" target="1.8" />
       <module name="guli_teacher" target="1.8" />
     </bytecodeTargetLevel>
@@ -24,8 +28,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="guigu_mp" options="-parameters" />
-      <module name="guigu_oss" options="-parameters" />
+      <module name="guigu_oss" options="" />
+      <module name="guigu_poi" options="-parameters" />
       <module name="guli_common" options="-parameters" />
+      <module name="guli_oss" options="-parameters" />
       <module name="guli_parent" options="-parameters" />
       <module name="guli_teacher" options="-parameters" />
     </option>
