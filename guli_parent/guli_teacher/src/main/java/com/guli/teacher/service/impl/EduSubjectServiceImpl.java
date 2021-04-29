@@ -3,6 +3,8 @@ package com.guli.teacher.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.guli.teacher.entity.EduSubject;
+import com.guli.teacher.entity.vo.OneSubject;
+import com.guli.teacher.entity.vo.TwoSubject;
 import com.guli.teacher.mapper.EduSubjectMapper;
 import com.guli.teacher.service.EduSubjectService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -10,11 +12,13 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,7 +87,7 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
                     continue;
                 }
                 subject = this.selectSubjectByNameAndId(cellValue, pid);
-                if(subject == null){
+                if (subject == null) {
                     subject = new EduSubject();
                     subject.setTitle(cellValue);
                     subject.setParentId(pid);
@@ -114,6 +118,68 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
         wrapper.eq("parent_id", pid);
         wrapper.eq("title", cellValue);
         return baseMapper.selectOne(wrapper);
+    }
+
+    @Override
+    public List<OneSubject> treeSubject() {
+        List<OneSubject> oneSubjectList = new ArrayList<>();
+        QueryWrapper<EduSubject> wrapper = new QueryWrapper<>();
+        wrapper.eq("parent_id", 0);
+        List<EduSubject> oneList = baseMapper.selectList(wrapper);
+
+        for (EduSubject eduSubject : oneList) {
+            OneSubject oneSubject = new OneSubject();
+            BeanUtils.copyProperties(eduSubject, oneSubject);
+
+            QueryWrapper<EduSubject> twoWarpper = new QueryWrapper<>();
+            twoWarpper.eq("parent_id", oneSubject.getId());
+            List<EduSubject> twoSubjectList = baseMapper.selectList(twoWarpper);
+            List<TwoSubject> twoList = new ArrayList<>();
+            for (EduSubject subject : twoSubjectList) {
+                TwoSubject twoSubject = new TwoSubject();
+                BeanUtils.copyProperties(subject, twoSubject);
+                twoList.add(twoSubject);
+            }
+            oneSubject.setChildren(twoList);
+            oneSubjectList.add(oneSubject);
+        }
+        return oneSubjectList;
+    }
+
+    @Override
+    public Boolean saveLevelOne(EduSubject subject) {
+        EduSubject eduSubject = this.selectSubjectByName(subject.getTitle());
+        if (eduSubject != null) {
+            return false;
+        }
+
+        subject.setSort(0);
+        int insert = baseMapper.insert(subject);
+
+        return insert == 1;
+    }
+
+    @Override
+    public Boolean saveLevelTwo(EduSubject subject) {
+        EduSubject eduSubject = this.selectSubjectByName(subject.getTitle());
+        if (eduSubject != null) {
+            return false;
+        }
+        subject.setSort(1);
+        int insert = baseMapper.insert(subject);
+        return insert == 1;
+    }
+
+    @Override
+    public boolean removeById(Serializable id) {
+//                    QueryWrapper<EduSubject> wrapper = new QueryWrapper<>();
+//        wrapper.eq("parent_id", 0);
+//        List<EduSubject> list = baseMapper.selectList(wrapper);
+//        if (list.size() != 0) {
+//            return false;
+//        }
+        int i = baseMapper.deleteById(id);
+        return i == 1;
     }
 
 }

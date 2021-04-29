@@ -2,6 +2,7 @@ package com.guli.teacher.service;
 
 import com.guli.teacher.entity.EduSubject;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.guli.teacher.entity.vo.OneSubject;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -21,4 +22,10 @@ public interface EduSubjectService extends IService<EduSubject> {
     EduSubject selectSubjectByName(String cellValue);
 
     EduSubject selectSubjectByNameAndId(String cellValue, String pid);
+
+    List<OneSubject> treeSubject();
+
+    Boolean saveLevelOne(EduSubject subject);
+
+    Boolean saveLevelTwo(EduSubject subject);
 }
