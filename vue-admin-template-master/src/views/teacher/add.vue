@@ -29,6 +29,34 @@
       </el-form-item>
 
       <!-- 讲师头像：TODO -->
+      <el-form-item label="讲师头像">
+        <!-- 头衔缩略图 -->
+        <pan-thumb :image="teacher.avatar" />
+        <!-- 文件上传按钮 -->
+        <el-button
+          type="primary"
+          icon="el-icon-upload"
+          @click="imagecropperShow = true"
+          >更换头像
+        </el-button>
+
+        <!--
+      v-show：是否显示上传组件
+      :key：类似于id，如果一个页面多个图片上传控件，可以做区分
+      :url：后台上传的url地址
+      @close：关闭上传组件
+      @crop-upload-success：上传成功后的回调 -->
+        <image-cropper
+          v-show="imagecropperShow"
+          :width="300"
+          :height="300"
+          :key="imagecropperKey"
+          :url="'/oss/file/upload'"
+          field="file"
+          @close="close"
+          @crop-upload-success="cropSuccess"
+        />
+      </el-form-item>
 
       <el-form-item>
         <el-button
@@ -46,6 +74,8 @@
  
 <script>
 import teacher from "@/api/edu/teacher";
+import ImageCropper from "@/components/ImageCropper";
+import PanThumb from "@/components/PanThumb";
 
 const DefaultForm = {
   name: "",
@@ -53,20 +83,19 @@ const DefaultForm = {
   level: "",
   career: "",
   intro: "",
-  avatar: "",
+  avatar:
+    process.env.VUE_APP_OSS_PATH+"/avatar/2021/04/25/c61ea261-9a97-46bc-9229-ba3754d74cc2.jpeg",
 };
 export default {
+  components: { ImageCropper, PanThumb },
   data() {
     return {
-      teacher: {
-        name: "",
-        sort: 0,
-        level: 1,
-        career: "",
-        intro: "",
-        avatar: "",
-      },
+      teacher: DefaultForm,
       saveBtnDisabled: false, // 保存按钮是否禁用,
+      BASE_API: process.env.VUE_APP_BASE_API, // 接口API地址
+      OSS_PATH: process.env.VUE_APP_OSS_PATH,
+      imagecropperShow: false, // 是否显示上传组件
+      imagecropperKey: 0, // 上传组件id
     };
   },
   created() {
@@ -144,6 +173,16 @@ export default {
             });
           });
       }
+    },
+    close() {
+      this.imagecropperShow = false;
+      this.imagecropperKey = this.imagecropperKey + 1;
+    },
+    cropSuccess(data) {
+      console.log(data);
+      this.teacher.avatar = data.url;
+      this.imagecropperShow = false;
+      this.imagecropperKey = this.imagecropperKey + 1;
     },
   },
 };

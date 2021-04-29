@@ -62,7 +62,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: "/teacher/list",
     name: "讲师管理",
-    meta: { title: "teacher", icon: "el-icon-s-help" },
+    meta: { title: "讲师管理", icon: "el-icon-s-help" },
     children: [
       {
         path: "list",
@@ -87,15 +87,24 @@ export const constantRoutes = [
   },
 
   {
-    path: "/form",
+    path: "/subject",
     component: Layout,
+    redirect: "/subject/list",
+    name: "课程分类管理管理",
+    meta: { title: "课程分类管理", icon: "example" },
     children: [
       {
-        path: "index",
-        name: "Form",
-        component: () => import("@/views/form/index"),
-        meta: { title: "Form", icon: "form" }
-      }
+        path: "list",
+        name: "课程分类列表",
+        component: () => import("@/views/subject/list"),
+        meta: { title: "课程分类列表", icon: "table" }
+      },
+      {
+        path: "import",
+        name: "课程分类导入",
+        component: () => import("@/views/subject/import"),
+        meta: { title: "课程分类导入", icon: "tree" }
+      },
     ]
   },
 
