@@ -15,4 +15,8 @@ import com.guli.teacher.entity.vo.CourseVo;
 public interface EduCourseService extends IService<EduCourse> {
 
     String saveVo(CourseVo vo);
+
+    CourseVo getCourseVoById(String id);
+
+    boolean updateCourse(CourseVo courseVo);
 }

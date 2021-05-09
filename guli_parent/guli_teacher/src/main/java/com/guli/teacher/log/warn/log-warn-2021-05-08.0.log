@@ -1,0 +1,36 @@
+2021-05-08 00:15:26.135 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h12m40s821ms).
+2021-05-08 00:16:15.325 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s146ms).
+2021-05-08 13:30:09.277 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h13m23s396ms).
+2021-05-08 13:33:20.893 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m11s616ms).
+2021-05-08 13:34:20.259 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s363ms), soft-evicting connections from pool.
+2021-05-08 16:43:37.545 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2021-05-08 17:33:35.599 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m7s524ms).
+2021-05-08 17:48:18.446 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m43s625ms).
+2021-05-08 18:03:19.859 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s413ms).
+2021-05-08 18:22:49.342 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m29s483ms).
+2021-05-08 19:30:54.157 [http-nio-8001-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:30:57.333 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:39:30.717 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:50:49.430 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:51:40.690 [http-nio-8001-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:53:27.420 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:53:31.524 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:53:38.014 [http-nio-8001-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:57:07.035 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:58:21.979 [http-nio-8001-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 19:58:27.765 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 20:36:29.477 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'edu_course.PRIMARY'
+### The error may involve com.guli.teacher.mapper.EduCourseMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_course  ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover, buy_count, view_count, version, status, gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'edu_course.PRIMARY'
+; Duplicate entry '10' for key 'edu_course.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '10' for key 'edu_course.PRIMARY']
+2021-05-08 21:57:50.954 [http-nio-8001-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 21:58:17.289 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-08 23:13:46.001 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h12m49s751ms).
+2021-05-08 23:15:51.303 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s181ms).
+2021-05-08 23:17:25.376 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s73ms).
+2021-05-08 23:19:22.013 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s634ms).
+2021-05-08 23:20:40.248 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s235ms).
+2021-05-08 23:22:20.696 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s440ms).
