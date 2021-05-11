@@ -30,13 +30,13 @@
             size="mini"
             @click="
               () => {
-                (dialogFormVisible = true), (subject.parent_id = data.id);
+                (dialogFormVisible = true),
+                (subject.parentId = data.id);
               }
             "
             >添加</el-button
           >
           <el-button
-            v-if="node.level == 2"
             type="text"
             size="mini"
             @click="() => remove(node, data)"
@@ -74,7 +74,7 @@ export default {
       dialogFormVisible: false,
       subject: {
         title: "",
-        parent_id: 0,
+        parentId: 0,
       },
     };
   },
@@ -90,13 +90,12 @@ export default {
 
   methods: {
     append() {
-      if (this.subject.parent_id == 0) {
+      if (this.subject.parentId == 0) {
         this.appendLevelOne();
       } else {
         this.appendLevelTwo();
       }
     },
-    remove() {},
     fetchNodeList() {
       subject.getNestedTreeList().then((response) => {
         if (response.success === true) {
@@ -115,7 +114,7 @@ export default {
             });
             this.fetchNodeList();
           this.subject.title = "";
-          this.subject.parent_id = 0;
+          this.subject.parentId = 0;
           })
           .catch((response) => {
             this.$message({
@@ -123,7 +122,7 @@ export default {
               message: "添加二级目录失败",
             });
             this.subject.title = "";
-            this.subject.parent_id = 0;
+            this.subject.parentId = 0;
           });
     },
     filterNode(value, data) {

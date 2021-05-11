@@ -1,23 +1,31 @@
-2021-05-09 00:01:30.795 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m10s100ms).
-2021-05-09 02:01:46.465 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h15s412ms).
-2021-05-09 04:02:41.987 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h25s535ms).
-2021-05-09 06:03:37.747 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h25s722ms).
-2021-05-09 07:15:06.632 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h10m58s699ms).
-2021-05-09 08:21:57.585 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m50s957ms).
-2021-05-09 09:16:54.597 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DuplicateKeyException: 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1391189451241209858' for key 'edu_course.PRIMARY'
-### The error may involve com.guli.teacher.mapper.EduCourseMapper.insert-Inline
-### The error occurred while setting parameters
-### SQL: INSERT INTO edu_course  ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover, buy_count, view_count, version, status, gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1391189451241209858' for key 'edu_course.PRIMARY'
-; Duplicate entry '1391189451241209858' for key 'edu_course.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1391189451241209858' for key 'edu_course.PRIMARY']
-2021-05-09 09:17:54.483 [http-nio-8001-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:18:01.260 [http-nio-8001-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:18:08.947 [http-nio-8001-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:18:40.289 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:19:26.484 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:20:17.231 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:20:35.436 [http-nio-8001-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:22:26.665 [http-nio-8001-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=没有课程编号，修改失败)]
-2021-05-09 09:24:22.915 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
-2021-05-09 09:25:03.279 [http-nio-8001-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [EduException(code=20001, msg=此课程不存在)]
+2021-05-11 01:41:00.124 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h44m55s91ms).
+2021-05-11 03:41:51.532 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h20s671ms).
+2021-05-11 05:42:27.125 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h5s532ms).
+2021-05-11 07:00:06.556 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h17m9s204ms).
+2021-05-11 07:41:25.911 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m19s378ms).
+2021-05-11 07:56:25.284 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m59s373ms).
+2021-05-11 08:11:27.278 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s994ms).
+2021-05-11 08:26:29.278 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s).
+2021-05-11 08:41:31.272 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s994ms).
+2021-05-11 08:56:33.272 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s).
+2021-05-11 09:11:35.274 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s2ms).
+2021-05-11 09:26:37.272 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s998ms).
+2021-05-11 09:41:39.274 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s2ms).
+2021-05-11 11:40:13.271 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58m33s997ms).
+2021-05-11 12:41:39.273 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m26s2ms).
+2021-05-11 16:48:40.470 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h7m1s197ms).
+2021-05-11 16:49:40.244 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s762ms), soft-evicting connections from pool.
+2021-05-11 18:19:43.188 [http-nio-8001-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException:  The SQL execution time is too large, please optimize ! 
+### The error may exist in com/guli/teacher/mapper/EduTeacherMapper.java (best guess)
+### The error may involve com.guli.teacher.mapper.EduTeacherMapper.selectList
+### The error occurred while handling results
+### SQL: SELECT  id,name,intro,career,level,avatar,sort,is_deleted,gmt_create,gmt_modified  FROM edu_teacher  WHERE  is_deleted=0
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException:  The SQL execution time is too large, please optimize ! ]
+2021-05-11 18:19:43.217 [http-nio-8001-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-05-11 23:33:30.141 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.lang.Integer` out of VALUE_FALSE token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.Integer` out of VALUE_FALSE token
+ at [Source: (PushbackInputStream); line: 1, column: 126] (through reference chain: com.guli.teacher.entity.EduVideo["isFree"])]
+2021-05-11 23:33:37.652 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.lang.Integer` out of VALUE_FALSE token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.Integer` out of VALUE_FALSE token
+ at [Source: (PushbackInputStream); line: 1, column: 126] (through reference chain: com.guli.teacher.entity.EduVideo["isFree"])]
+2021-05-11 23:33:44.773 [http-nio-8001-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.lang.Integer` out of VALUE_TRUE token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.Integer` out of VALUE_TRUE token
+ at [Source: (PushbackInputStream); line: 1, column: 126] (through reference chain: com.guli.teacher.entity.EduVideo["isFree"])]

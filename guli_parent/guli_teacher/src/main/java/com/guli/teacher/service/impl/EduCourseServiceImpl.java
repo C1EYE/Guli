@@ -1,7 +1,10 @@
 package com.guli.teacher.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduCourse;
 import com.guli.teacher.entity.EduCourseDescription;
+import com.guli.teacher.entity.query.CourseQuery;
 import com.guli.teacher.entity.vo.CourseVo;
 import com.guli.teacher.exception.EduException;
 import com.guli.teacher.mapper.EduCourseMapper;
@@ -84,5 +87,50 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         boolean b = service.updateById(courseVo.getDescription());
         return b;
 
+    }
+
+    @Override
+    public void pageQuery(Page<EduCourse> pageParam, CourseQuery courseQuery) {
+        QueryWrapper<EduCourse> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("gmt_create");
+        if (courseQuery == null) {
+            baseMapper.selectPage(pageParam, queryWrapper);
+            return;
+        }
+        String title = courseQuery.getTitle();
+        String teacherId = courseQuery.getTeacherId();
+        String subjectParentId = courseQuery.getSubjectParentId();
+        String subjectId = courseQuery.getSubjectId();
+        if (!StringUtils.isEmpty(title)) {
+            queryWrapper.like("title", title);
+        }
+        if (!StringUtils.isEmpty(teacherId)) {
+            queryWrapper.eq("teacher_id", teacherId);
+        }
+        if (!StringUtils.isEmpty(subjectParentId)) {
+            queryWrapper.eq("subject_parent_id", subjectParentId);
+        }
+        if (!StringUtils.isEmpty(subjectId)) {
+            queryWrapper.eq("subject_id", subjectId);
+        }
+        baseMapper.selectPage(pageParam, queryWrapper);
+
+    }
+
+    @Override
+    public boolean removeCourseById(String id) {
+        //TODO 根据id删除所有视频
+
+        //TODO 根据id删除所有章节
+
+        //FIXME 逻辑删除课程描述
+        boolean b = service.removeById(id);
+        if (!b) {
+            // 如果描述没有删除成功直接返回
+            return false;
+        }
+        Integer result = baseMapper.deleteById(id);
+
+        return result == 1;
     }
 }

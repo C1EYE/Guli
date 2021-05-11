@@ -1,11 +1,9 @@
 package com.guli.teacher.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -35,6 +33,11 @@ public class EduCourseDescription implements Serializable {
 
     @ApiModelProperty(value = "课程简介")
     private String description;
+
+    @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
+    @TableLogic
+    @TableField(fill=FieldFill.INSERT)
+    private Integer isDeleted;
 
     @ApiModelProperty(value = "创建时间",example = "2001-01-01 00:00:00")
     @TableField(fill= FieldFill.INSERT)

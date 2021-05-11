@@ -1,15 +1,21 @@
 package com.guli.teacher.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.common.result.Result;
+import com.guli.teacher.entity.EduCourse;
+import com.guli.teacher.entity.query.CourseQuery;
 import com.guli.teacher.entity.vo.CourseVo;
 import com.guli.teacher.service.EduCourseDescriptionService;
 import com.guli.teacher.service.EduCourseService;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * <p>
@@ -45,6 +51,41 @@ public class EduCourseController {
         boolean result = courseService.updateCourse(courseVo);
         return result ? Result.ok().data("courseId", courseVo.getCourse().getId()) : Result.error();
     }
+
+    @ApiOperation(value = "分页课程列表")
+    @PostMapping("{page}/{limit}")
+    public Result pageQuery(
+            @ApiParam(name = "page", value = "当前页码", required = true)
+            @PathVariable Long page,
+
+            @ApiParam(name = "limit", value = "每页记录数", required = true)
+            @PathVariable Long limit,
+
+            @ApiParam(name = "courseQuery", value = "查询对象", required = false)
+            @RequestBody CourseQuery courseQuery) {
+
+        Page<EduCourse> pageParam = new Page<>(page, limit);
+        courseService.pageQuery(pageParam, courseQuery);
+        List<EduCourse> records = pageParam.getRecords();
+        long total = pageParam.getTotal();
+        return Result.ok().data("total", total).data("rows", records);
+    }
+
+    @ApiOperation(value = "根据ID删除课程")
+    @DeleteMapping("{id}")
+    public Result removeById(
+            @ApiParam(name = "id", value = "课程ID", required = true)
+            @PathVariable String id){
+
+        boolean result = courseService.removeCourseById(id);
+        if(result){
+            return Result.ok();
+        }else{
+            return Result.error().message("删除失败");
+        }
+    }
+
+
 
 }
 
