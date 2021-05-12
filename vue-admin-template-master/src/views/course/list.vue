@@ -108,6 +108,19 @@
       >
         <template slot-scope="scope"> {{ scope.row.buyCount }}人 </template>
       </el-table-column>
+      <el-table-column
+        prop="status"
+        label="课程状态"
+        width="100"
+        align="center"
+      >
+        <template slot-scope="scope">
+          <el-tag
+            :type="scope.row.status === 'Draft' ? 'primary' : 'success'"
+            >{{ scope.row.status === "Draft" ? "未发布" : "已发布" }}</el-tag
+          >
+        </template>
+      </el-table-column>
 
       <el-table-column label="操作" width="150" align="center">
         <template slot-scope="scope">

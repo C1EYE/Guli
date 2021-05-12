@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.common.result.Result;
 import com.guli.teacher.entity.EduCourse;
 import com.guli.teacher.entity.query.CourseQuery;
+import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
 import com.guli.teacher.service.EduCourseDescriptionService;
 import com.guli.teacher.service.EduCourseService;
@@ -82,6 +83,26 @@ public class EduCourseController {
             return Result.ok();
         }else{
             return Result.error().message("删除失败");
+        }
+    }
+
+    @GetMapping("/vo/{id}")
+    public Result getCoursePublishVoById(@PathVariable String id){
+        CoursePublishVo voursePublishVo = courseService.getCoursePublishVoById(id);
+        if(voursePublishVo != null){
+            return Result.ok().data("item",voursePublishVo);
+        } else {
+            return Result.error();
+        }
+    }
+
+    @PutMapping("/status/{id}")
+    public Result updateByStatusById(@PathVariable String id){
+        Boolean flag = courseService.updateStatusById(id);
+        if(flag){
+            return Result.ok();
+        } else{
+            return Result.error();
         }
     }
 

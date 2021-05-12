@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduCourse;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.guli.teacher.entity.query.CourseQuery;
+import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -25,4 +28,10 @@ public interface EduCourseService extends IService<EduCourse> {
     void pageQuery(Page<EduCourse> pageParam, CourseQuery courseQuery);
 
     boolean removeCourseById(String id);
+
+    CoursePublishVo getCoursePublishVoById(String id);
+
+    Boolean updateStatusById(String id);
+
+    Map<String, Object> getCoursePublishMapById(String id);
 }

@@ -4,17 +4,22 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduCourse;
 import com.guli.teacher.entity.EduCourseDescription;
+import com.guli.teacher.entity.EduVideo;
 import com.guli.teacher.entity.query.CourseQuery;
+import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
 import com.guli.teacher.exception.EduException;
 import com.guli.teacher.mapper.EduCourseMapper;
 import com.guli.teacher.service.EduCourseDescriptionService;
 import com.guli.teacher.service.EduCourseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.guli.teacher.service.EduVideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -29,7 +34,12 @@ import org.springframework.util.StringUtils;
 public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse> implements EduCourseService {
 
     @Autowired
-    private EduCourseDescriptionService service;
+    private EduCourseDescriptionService eduCourseDescriptionService;
+
+    @Autowired
+    private EduVideoService eduVideoService;
+
+
 
     /**
      * 保存课程基本信息
@@ -45,7 +55,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
         EduCourseDescription eduCourseDescription = vo.getDescription().setId(courseId);
 
-        service.save(eduCourseDescription);
+        eduCourseDescriptionService.save(eduCourseDescription);
         return courseId;
     }
 
@@ -61,7 +71,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
         courseVo.setCourse(eduCourse);
 
-        EduCourseDescription description = service.getById(id);
+        EduCourseDescription description = eduCourseDescriptionService.getById(id);
 
         if (description != null) {
             courseVo.setDescription(description);
@@ -84,7 +94,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         String courseId = courseVo.getCourse().getId();
         //设置课程描述的ID
         courseVo.getDescription().setId(courseId);
-        boolean b = service.updateById(courseVo.getDescription());
+        boolean b = eduCourseDescriptionService.updateById(courseVo.getDescription());
         return b;
 
     }
@@ -124,7 +134,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         //TODO 根据id删除所有章节
 
         //FIXME 逻辑删除课程描述
-        boolean b = service.removeById(id);
+        boolean b = eduCourseDescriptionService.removeById(id);
         if (!b) {
             // 如果描述没有删除成功直接返回
             return false;
@@ -132,5 +142,27 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         Integer result = baseMapper.deleteById(id);
 
         return result == 1;
+    }
+
+    @Override
+    public CoursePublishVo getCoursePublishVoById(String id) {
+        CoursePublishVo coursePublishVo = baseMapper.getCoursePublishVoById(id);
+        return coursePublishVo;
+    }
+
+    @Override
+    public Boolean updateStatusById(String id) {
+        EduCourse course = new EduCourse();
+        course.setId(id);
+        course.setStatus("Normal");
+        int update = baseMapper.updateById(course);
+        return update > 0;
+
+    }
+
+    //使用Map封装的方式
+    @Override
+    public Map<String, Object> getCoursePublishMapById(String id){
+        return baseMapper.getCoursePublishMapById(id);
     }
 }
