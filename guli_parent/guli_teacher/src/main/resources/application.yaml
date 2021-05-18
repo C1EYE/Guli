@@ -37,3 +37,10 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:com/guli/teacher/mapper/xml/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8004/eureka/
+  instance:
+    prefer-ip-address: true

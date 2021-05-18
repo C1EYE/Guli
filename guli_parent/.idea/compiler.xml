@@ -7,22 +7,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="guigu_video" />
+        <module name="guli_common" />
+        <module name="guli_teacher" />
+        <module name="guli_eureka" />
+        <module name="guigu_poi" />
+        <module name="guli_vod" />
         <module name="guigu_oss" />
         <module name="guigu_mp" />
-        <module name="guli_common" />
         <module name="guli_oss" />
-        <module name="guli_teacher" />
-        <module name="guigu_poi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="guigu_mp" target="1.8" />
       <module name="guigu_oss" target="1.5" />
       <module name="guigu_poi" target="1.8" />
+      <module name="guigu_video" target="8" />
       <module name="guli_common" target="1.8" />
+      <module name="guli_eureka" target="1.8" />
       <module name="guli_oss" target="1.8" />
       <module name="guli_parent" target="1.8" />
       <module name="guli_teacher" target="1.8" />
+      <module name="guli_vod" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -31,9 +37,11 @@
       <module name="guigu_oss" options="" />
       <module name="guigu_poi" options="-parameters" />
       <module name="guli_common" options="-parameters" />
+      <module name="guli_eureka" options="-parameters" />
       <module name="guli_oss" options="-parameters" />
       <module name="guli_parent" options="-parameters" />
       <module name="guli_teacher" options="-parameters" />
+      <module name="guli_vod" options="-parameters" />
     </option>
   </component>
 </project>

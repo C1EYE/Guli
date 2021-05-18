@@ -1,0 +1,3 @@
+2021-05-15 00:10:40.806 [Thread-4] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-15 00:10:40.813 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-05-15 00:10:40.818 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

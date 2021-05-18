@@ -1,0 +1,83 @@
+2021-05-17 00:25:07.559 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m10s706ms).
+2021-05-17 00:40:09.617 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s58ms).
+2021-05-17 00:55:21.375 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m41s292ms).
+2021-05-17 01:10:29.331 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m7s956ms).
+2021-05-17 01:40:21.178 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m51s847ms).
+2021-05-17 02:05:58.046 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m36s841ms).
+2021-05-17 02:21:12.556 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m44s57ms).
+2021-05-17 02:36:26.146 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m43s568ms).
+2021-05-17 03:13:49.915 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m53s740ms).
+2021-05-17 03:28:43.714 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m23s770ms).
+2021-05-17 03:43:51.278 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m7s565ms).
+2021-05-17 03:58:32.550 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m41s272ms).
+2021-05-17 04:13:43.468 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m10s918ms).
+2021-05-17 04:28:57.149 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m43s666ms).
+2021-05-17 04:31:31.461 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s312ms).
+2021-05-17 04:46:55.854 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m24s378ms).
+2021-05-17 05:01:44.460 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m48s606ms).
+2021-05-17 05:16:52.097 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m7s638ms).
+2021-05-17 05:46:42.103 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m50s6ms).
+2021-05-17 06:01:52.361 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m10s258ms).
+2021-05-17 06:17:03.628 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m41s253ms).
+2021-05-17 07:47:56.548 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30m52s919ms).
+2021-05-17 08:23:07.495 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m10s948ms).
+2021-05-17 08:27:06.336 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m28s837ms).
+2021-05-17 12:01:01.772 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m54s575ms).
+2021-05-17 12:33:47.879 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m16s52ms).
+2021-05-17 12:49:57.667 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m39s785ms).
+2021-05-17 15:29:13.489 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s5ms).
+2021-05-17 15:36:54.222 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m40s736ms).
+2021-05-17 15:51:55.507 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s285ms).
+2021-05-17 15:56:28.418 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m32s911ms).
+2021-05-17 22:34:28.426 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2021-05-17 22:34:28.729 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2021-05-17 22:34:42.620 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2021-05-17 22:34:42.894 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2021-05-17 22:38:20.110 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER/diyandembp:guli-teacher:8001": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 22:38:20.116 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER/diyandembp:guli-teacher:8001": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 22:38:20.170 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-VOD/diyandembp:guli-vod:8003": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 22:38:20.177 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-VOD/diyandembp:guli-vod:8003": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 22:54:28.896 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2021-05-17 22:54:29.246 [restartedMain] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on GET request for "http://127.0.0.1:8004/eureka/apps/": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 22:54:29.247 [restartedMain] WARN  com.netflix.discovery.DiscoveryClient - Using default backup registry implementation which does not do anything.
+2021-05-17 22:54:29.318 [DiscoveryClient-InstanceInfoReplicator-0] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 22:54:29.321 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.DiscoveryClient - DiscoveryClient_GULI-TEACHER/diyandembp:guli-teacher:8001 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-17 22:54:29.322 [DiscoveryClient-InstanceInfoReplicator-0] WARN  com.netflix.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-17 22:54:38.491 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2021-05-17 22:54:38.975 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2021-05-17 22:54:42.967 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2021-05-17 22:55:13.507 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2021-05-17 23:03:43.326 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER/diyandembp:guli-teacher:8001": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 23:03:43.337 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER/diyandembp:guli-teacher:8001": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 23:03:43.370 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-VOD/diyandembp:guli-vod:8003": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-17 23:03:43.376 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-VOD/diyandembp:guli-vod:8003": Connection refused; nested exception is java.net.ConnectException: Connection refused

@@ -5,8 +5,10 @@
     <file url="file://$PROJECT_DIR$/../guigu_mp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../guigu_poi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guli_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guli_eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guli_oss/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guli_teacher/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guli_vod/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

@@ -5,10 +5,13 @@
       <module fileurl="file://$PROJECT_DIR$/../guigu_mp/guigu_mp.iml" filepath="$PROJECT_DIR$/../guigu_mp/guigu_mp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../guigu_oss/guigu_oss.iml" filepath="$PROJECT_DIR$/../guigu_oss/guigu_oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/../guigu_poi/guigu_poi.iml" filepath="$PROJECT_DIR$/../guigu_poi/guigu_poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guigu_video/guigu_video.iml" filepath="$PROJECT_DIR$/../guigu_video/guigu_video.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_common/guli_common.iml" filepath="$PROJECT_DIR$/guli_common/guli_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_eureka/guli_eureka.iml" filepath="$PROJECT_DIR$/guli_eureka/guli_eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_oss/guli_oss.iml" filepath="$PROJECT_DIR$/guli_oss/guli_oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_parent.iml" filepath="$PROJECT_DIR$/guli_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/guli_teacher/guli_teacher.iml" filepath="$PROJECT_DIR$/guli_teacher/guli_teacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guli_vod/guli_vod.iml" filepath="$PROJECT_DIR$/guli_vod/guli_vod.iml" />
     </modules>
   </component>
 </project>

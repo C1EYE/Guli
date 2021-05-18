@@ -4,12 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduCourse;
 import com.guli.teacher.entity.EduCourseDescription;
-import com.guli.teacher.entity.EduVideo;
 import com.guli.teacher.entity.query.CourseQuery;
 import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
 import com.guli.teacher.exception.EduException;
 import com.guli.teacher.mapper.EduCourseMapper;
+import com.guli.teacher.service.EduChapterService;
 import com.guli.teacher.service.EduCourseDescriptionService;
 import com.guli.teacher.service.EduCourseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -39,6 +39,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
     @Autowired
     private EduVideoService eduVideoService;
 
+    @Autowired
+    private EduChapterService eduChapterService;
 
 
     /**
@@ -129,19 +131,34 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
     @Override
     public boolean removeCourseById(String id) {
-        //TODO 根据id删除所有视频
+//        //TODO 根据id删除所有视频
+//         eduVideoService.removeVideoByCourseId(id);
+//        //TODO 根据id删除所有章节
+//        eduChapterService.removeByCourseId(id);
+//        //FIXME 逻辑删除课程描述
+//        boolean b = eduCourseDescriptionService.removeById(id);
+//        if (!b) {
+//            // 如果描述没有删除成功直接返回
+//            return false;
+//        }
+//        Integer result = baseMapper.deleteById(id);
+//
+//        return result == 1;
+        //根据id删除所有视频
+        eduVideoService.removeVideoByCourseId(id);
 
-        //TODO 根据id删除所有章节
+        //根据id删除所有章节
+        eduChapterService.removeByCourseId(id);
 
-        //FIXME 逻辑删除课程描述
+        // 删除描述
         boolean b = eduCourseDescriptionService.removeById(id);
-        if (!b) {
-            // 如果描述没有删除成功直接返回
+        if(!b){
             return false;
         }
-        Integer result = baseMapper.deleteById(id);
+        // 删除基本信息
+        int i = baseMapper.deleteById(id);
+        return i == 1;
 
-        return result == 1;
     }
 
     @Override

@@ -34,7 +34,7 @@ public class EduVideoController {
     }
 
     //查询小节
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Result getVideoById(@PathVariable String id) {
         try {
             EduVideo eduVideo = eduVideoService.getById(id);
@@ -46,7 +46,7 @@ public class EduVideoController {
     }
 
     //修改小节
-    @PutMapping("update")
+    @PutMapping("/update")
     public Result updateVideo(@RequestBody EduVideo video) {
         boolean update = eduVideoService.updateById(video);
         if (update) {
@@ -56,7 +56,7 @@ public class EduVideoController {
     }
 
     //删除小节
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public Result deleteVideo(@PathVariable String id) {
         Boolean flag = eduVideoService.removeByVideoId(id);
         if (flag) {
@@ -64,6 +64,8 @@ public class EduVideoController {
         }
         return Result.error();
     }
+
+
 }
 
 

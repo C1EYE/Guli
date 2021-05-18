@@ -51,16 +51,46 @@
         </el-form-item>
         <el-form-item label="是否免费">
           <el-radio-group v-model="video.isFree">
-            <el-radio :label=0>免费</el-radio>
-            <el-radio :label=1>默认</el-radio>
+            <el-radio :label="0">免费</el-radio>
+            <el-radio :label="1">默认</el-radio>
           </el-radio-group>
         </el-form-item>
+
         <el-form-item label="上传视频">
-          <!-- TODO -->
+          <el-upload
+            :before-upload="hanleBeforeUpload"
+            :on-success="handleVodUploadSuccess"
+            :on-remove="handleVodRemove"
+            :before-remove="beforeVodRemove"
+            :on-exceed="handleUploadExceed"
+            :file-list="fileList"
+            :action="BASE_API + '/vod/upload'"
+            :limit="1"
+            class="upload-demo"
+          >
+            <el-button size="small" type="primary">上传视频</el-button>
+            <el-tooltip placement="right-end">
+              <div slot="content">
+                最大支持1G，<br />
+                支持3GP、ASF、AVI、DAT、DV、FLV、F4V、<br />
+                GIF、M2T、M4V、MJ2、MJPEG、MKV、MOV、MP4、<br />
+                MPE、MPG、MPEG、MTS、OGG、QT、RM、RMVB、<br />
+                SWF、TS、VOB、WMV、WEBM 等视频格式上传
+              </div>
+              <i class="el-icon-question" />
+            </el-tooltip>
+          </el-upload>
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogVideoFormVisible = false">取 消</el-button>
+        <el-button
+          @click="
+            video = {};
+            fileList = [];
+            dialogVideoFormVisible = false;
+          "
+          >取 消</el-button
+        >
         <el-button
           :disabled="saveVideoBtnDisabled"
           type="primary"
@@ -100,8 +130,12 @@
             <p>
               {{ video.title }}
               <span class="acts">
-                <el-button type="text" @click="editVideo(video.id)">编辑</el-button>
-                <el-button type="text" @click="removeVideo(video.id)">删除</el-button>
+                <el-button type="text" @click="editVideo(video.id)"
+                  >编辑</el-button
+                >
+                <el-button type="text" @click="removeVideo(video.id)"
+                  >删除</el-button
+                >
               </span>
             </p>
           </li>
@@ -121,10 +155,13 @@
 <script>
 import chapter from "@/api/edu/chapter";
 import video from "@/api/edu/video";
-
+import vod from "@/api/edu/vod";
 export default {
   data() {
     return {
+      fileList: [], //上传文件列表
+      BASE_API: process.env.VUE_APP_BASE_API, // 接口API地址
+
       saveBtnDisabled: false, // 保存按钮是否禁用
       courseId: "", // 所属课程
       chapterNestedList: [], // 章节嵌套视频列表
@@ -140,11 +177,11 @@ export default {
       chapterId: "", // 课时所在的章节id
       video: {
         // 课时对象
-        id: "",
         title: "",
         sort: 0,
-        isFree: 0,
+        free: false,
         videoSourceId: "",
+        videoOriginalName: "",
       },
     };
   },
@@ -158,12 +195,12 @@ export default {
     init() {
       //获取路径里面id
       if (this.$route.params && this.$route.params.id) {
-        this.id = this.$route.params.id;
+        this.courseId = this.$route.params.id;
         this.fetchChapterNestedListByCourseId();
       }
     },
     fetchChapterNestedListByCourseId() {
-      chapter.getNestedTreeList(this.id).then((response) => {
+      chapter.getNestedTreeList(this.courseId).then((response) => {
         this.chapterNestedList = response.data.list;
       });
     },
@@ -174,6 +211,43 @@ export default {
       } else {
         this.updateDataVideo();
       }
+    },
+    hanleBeforeUpload(file) {
+      this.saveVideoBtnDisabled = true;
+    },
+
+    handleVodUploadSuccess(response, file, fileList) {
+      this.video.videoSourceId = response.data.videoSourceId;
+      this.video.videoOriginalName = file.name;
+      this.saveVideoBtnDisabled = false;
+    },
+    //视图上传多于一个视频
+    handleUploadExceed(files, fileList) {
+      this.$message.warning("想要重新上传视频，请先删除已上传的视频");
+    },
+
+    beforeVodRemove(file, fileList) {
+      return this.$confirm(`确定移除 ${file.name}？`);
+    },
+    handleVodRemove(file, fileList) {
+      console.log(file);
+      vod
+        .removeById(this.video.videoSourceId)
+        .then((response) => {
+          this.video.videoSourceId = "";
+          this.fileList = [];
+          this.video.videoOriginalName = "";
+          this.$message({
+            type: "success",
+            message: response.message,
+          });
+        })
+        .catch((error) => {
+          this.$message({
+            type: "error",
+            message: "删除失败",
+          });
+        });
     },
 
     saveDataVideo() {
@@ -194,8 +268,7 @@ export default {
       this.video.title = ""; // 重置章节标题
       this.video.sort = 0; // 重置章节标题
       this.video.videoSourceId = ""; // 重置视频资源id
-      this.video.id = "",
-      this.saveVideoBtnDisabled = false;
+      (this.video.id = ""), (this.saveVideoBtnDisabled = false);
     },
 
     saveOrUpdate() {
@@ -207,7 +280,7 @@ export default {
       }
     },
     saveData() {
-      this.chapter.courseId = this.id;
+      this.chapter.courseId = this.courseId;
       chapter
         .save(this.chapter)
         .then((response) => {
@@ -262,10 +335,14 @@ export default {
       this.dialogVideoFormVisible = true;
       video.getVideoById(videoId).then((response) => {
         this.video = response.data.eduVideo;
+        if (this.video.videoOriginalName != null&&this.video.videoOriginalName!="") {
+          this.fileList = [{ name: this.video.videoOriginalName }]
+        }
       });
     },
 
     updateDataVideo() {
+      this.video.courseId = this.courseId;
       video.updateVideo(this.video).then((response) => {
         this.$message({
           type: "success",
@@ -285,6 +362,9 @@ export default {
         })
         .then(() => {
           this.fetchChapterNestedListByCourseId(); // 刷新列表
+          this.video.videoSourceId = "";
+          this.video.videoOriginalName = "";
+          this.fileList = [];
           this.$message({
             type: "success",
             message: "删除成功!",
@@ -334,11 +414,11 @@ export default {
     },
 
     previous() {
-      this.$router.push({ path: "/course/info/" + this.id });
+      this.$router.push({ path: "/course/info/" + this.courseId });
     },
     next() {
       console.log("next");
-      this.$router.push({ path: "/course/publish/" + this.id });
+      this.$router.push({ path: "/course/publish/" + this.courseId });
     },
   },
 };
