@@ -7,6 +7,7 @@ import com.guli.teacher.entity.query.CourseQuery;
 import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,4 +35,8 @@ public interface EduCourseService extends IService<EduCourse> {
     Boolean updateStatusById(String id);
 
     Map<String, Object> getCoursePublishMapById(String id);
+
+    List<EduCourse> selectByTeacherId(String teacherId);
+
+    Map<String, Object> getCourseListFront(Page<EduCourse> eduCoursePage);
 }

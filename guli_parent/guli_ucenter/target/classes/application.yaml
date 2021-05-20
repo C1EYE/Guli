@@ -1,0 +1,77 @@
+
+## Hikari是Spring Boot .之后默认整合的数据库连接池，比druid更快的数据库连接池
+#
+## 数据源类型
+#
+## 最大连接数，小于等于会被重置为默认值；大于零小于会被重置为minimum-idle的值
+#
+#spring.datasource.hikari.maximum-pool-size=
+#
+## 连接超时时间:毫秒，小于毫秒，否则被重置为默认值秒
+#
+#spring.datasource.hikari.connection-timeout=
+#
+## 最小空闲连接，默认值，小于或大于maximum-pool-size，都会重置为maximum-pool-size
+#
+#spring.datasource.hikari.minimum-idle=
+#
+## 空闲连接超时时间，默认值（分钟），大于等于max-lifetime且max-lifetime>，会被重置为；不等于且小于秒，会被重置为秒。
+#
+## 只有空闲连接数大于最大连接数且空闲时间超过该值，才会被释放
+#
+#spring.datasource.hikari.idle-timeout=
+#
+## 连接最大存活时间.不等于且小于秒，会被重置为默认值分钟.设置应该比mysql设置的超时时间短
+#
+#spring.datasource.hikari.max-lifetime=
+#
+##连接测试查询
+#
+#spring.datasource.hikari.connection-test-query=SELECT
+
+
+server:
+  port: 8104
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli_edu?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: mmj_MMJ_123
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: GuliHikariPool
+      maximum-pool-size: 12
+      connection-timeout: 60000
+      minimum-idle: 10
+      idle-timeout: 500000
+      max-lifetime: 540000
+      connection-test-query: SELECT 1
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+
+  application:
+    name: guli-ucenter
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/guli/ucenter/mapper/xml/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8004/eureka/
+  instance:
+    prefer-ip-address: true
+logging:
+  level:
+    root: warn

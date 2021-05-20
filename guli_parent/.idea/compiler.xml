@@ -16,6 +16,8 @@
         <module name="guigu_oss" />
         <module name="guigu_mp" />
         <module name="guli_oss" />
+        <module name="guli_ucenter" />
+        <module name="guli_statis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,7 +29,9 @@
       <module name="guli_eureka" target="1.8" />
       <module name="guli_oss" target="1.8" />
       <module name="guli_parent" target="1.8" />
+      <module name="guli_statis" target="1.8" />
       <module name="guli_teacher" target="1.8" />
+      <module name="guli_ucenter" target="1.8" />
       <module name="guli_vod" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -40,7 +44,9 @@
       <module name="guli_eureka" options="-parameters" />
       <module name="guli_oss" options="-parameters" />
       <module name="guli_parent" options="-parameters" />
+      <module name="guli_statis" options="-parameters" />
       <module name="guli_teacher" options="-parameters" />
+      <module name="guli_ucenter" options="-parameters" />
       <module name="guli_vod" options="-parameters" />
     </option>
   </component>
