@@ -22,7 +22,7 @@
             </section>
             <section class="t-infor-txt">
               <p class="mt20">
-                {{teacherInfo.intro}}
+               {{teacherInfo.intro}} 
               </p>
             </section>
             <div class="clear"></div>

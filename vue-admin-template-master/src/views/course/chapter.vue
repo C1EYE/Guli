@@ -31,7 +31,7 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogChapterFormVisible = false">取 消</el-button>
+        <el-button @click="dialogChapterFormVisible = false,chapter.title='',chapter.sort=0,chapter.chapterId=''">取 消</el-button>
         <el-button type="primary" @click="saveOrUpdate">确 定</el-button>
       </div>
     </el-dialog>
@@ -269,14 +269,15 @@ export default {
       this.video.sort = 0; // 重置章节标题
       this.video.videoSourceId = ""; // 重置视频资源id
       (this.video.id = ""), (this.saveVideoBtnDisabled = false);
+      this.fileList = []
     },
 
     saveOrUpdate() {
       this.saveBtnDisabled = true;
-      if (!this.chapter.courseId) {
-        this.saveData();
+      if (this.chapter.id) {
+         this.updateData();
       } else {
-        this.updateData();
+        this.saveData();
       }
     },
     saveData() {
@@ -321,6 +322,7 @@ export default {
       this.fetchChapterNestedListByCourseId(); // 刷新列表
       this.chapter.title = ""; // 重置章节标题
       this.chapter.sort = 0; // 重置章节标题
+      this.chapter.id = ''
       this.saveBtnDisabled = false;
     },
 

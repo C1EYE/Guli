@@ -1,0 +1,11 @@
+2021-05-19 02:26:35.495 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h1m18s788ms).
+2021-05-19 04:27:36.689 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h31s36ms).
+2021-05-19 06:28:38.374 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h31s673ms).
+2021-05-19 08:29:37.860 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h29s471ms).
+2021-05-19 08:45:43.662 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m35s780ms).
+2021-05-19 13:25:34.734 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m49s81ms).
+2021-05-19 13:49:23.070 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m48s337ms).
+2021-05-19 21:36:49.780 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m52s993ms).
+2021-05-19 22:13:29.946 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m10s91ms).
+2021-05-19 23:51:02.214 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER/diyandembp:guli-teacher:8001": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2021-05-19 23:51:02.217 [SpringContextShutdownHook] WARN  c.n.d.s.t.decorator.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://127.0.0.1:8004/eureka/apps/GULI-TEACHER/diyandembp:guli-teacher:8001": Connection refused; nested exception is java.net.ConnectException: Connection refused

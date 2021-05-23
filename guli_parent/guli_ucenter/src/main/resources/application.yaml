@@ -75,3 +75,18 @@ eureka:
 logging:
   level:
     root: warn
+
+
+
+## 微信开放平台 appid
+#  wx.open.app_id=wxc606fb748aedee7c
+#  # 微信开放平台 appsecret
+#  wx.open.app_secret=e0b7f5277520dbe817dfcd1a96754fbf
+#  # 微信开放平台 重定向url
+#  wx.open.redirect_url=http://yaohuan.work/api/ucenter/wx/callback
+
+wx:
+  open:
+    app_id: wxc606fb748aedee7c
+    app_secret: e0b7f5277520dbe817dfcd1a96754fbf
+    redirect_url: http://c1eye.viphk.ngrok.org/api/ucenter/wx/callback

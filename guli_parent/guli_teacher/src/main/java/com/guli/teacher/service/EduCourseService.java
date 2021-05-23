@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduCourse;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.guli.teacher.entity.query.CourseQuery;
+import com.guli.teacher.entity.query.FrontCourseQuery;
 import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
+import com.guli.teacher.entity.vo.CourseWebVo;
 
 import java.util.List;
 import java.util.Map;
@@ -39,4 +41,9 @@ public interface EduCourseService extends IService<EduCourse> {
     List<EduCourse> selectByTeacherId(String teacherId);
 
     Map<String, Object> getCourseListFront(Page<EduCourse> eduCoursePage);
+
+    CourseWebVo getCourseInfoFrontById(String id);
+
+
+    Map<String, Object> getCourseListFrontWrapper(Page<EduCourse> eduCoursePage, FrontCourseQuery frontCourseQuery);
 }

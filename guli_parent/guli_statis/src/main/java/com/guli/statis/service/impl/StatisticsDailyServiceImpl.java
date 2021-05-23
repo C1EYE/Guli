@@ -37,7 +37,11 @@ public class StatisticsDailyServiceImpl extends ServiceImpl<StatisticsDailyMappe
         //删除相同日期
         QueryWrapper<StatisticsDaily> statisticsDailyQueryWrapper = new QueryWrapper<>();
         statisticsDailyQueryWrapper.eq("date_calculated", day);
-        baseMapper.delete(statisticsDailyQueryWrapper);
+        try {
+            baseMapper.delete(statisticsDailyQueryWrapper);
+        } catch (Exception e) {
+
+        }
         //将统计数据添加到数据库
         StatisticsDaily statisticsDaily = new StatisticsDaily();
         statisticsDaily.setDateCalculated(day);
@@ -46,6 +50,7 @@ public class StatisticsDailyServiceImpl extends ServiceImpl<StatisticsDailyMappe
         statisticsDaily.setCourseNum(RandomUtils.nextInt(100, 200));
         statisticsDaily.setLoginNum(RandomUtils.nextInt(100, 200));
         statisticsDaily.setVideoViewNum(RandomUtils.nextInt(100, 200));
+
 
 
         int insert = baseMapper.insert(statisticsDaily);

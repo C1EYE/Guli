@@ -13,6 +13,7 @@
         <module name="guli_eureka" />
         <module name="guigu_poi" />
         <module name="guli_vod" />
+        <module name="guli_gateway" />
         <module name="guigu_oss" />
         <module name="guigu_mp" />
         <module name="guli_oss" />
@@ -27,6 +28,7 @@
       <module name="guigu_video" target="8" />
       <module name="guli_common" target="1.8" />
       <module name="guli_eureka" target="1.8" />
+      <module name="guli_gateway" target="1.8" />
       <module name="guli_oss" target="1.8" />
       <module name="guli_parent" target="1.8" />
       <module name="guli_statis" target="1.8" />
@@ -42,6 +44,7 @@
       <module name="guigu_poi" options="-parameters" />
       <module name="guli_common" options="-parameters" />
       <module name="guli_eureka" options="-parameters" />
+      <module name="guli_gateway" options="-parameters" />
       <module name="guli_oss" options="-parameters" />
       <module name="guli_parent" options="-parameters" />
       <module name="guli_statis" options="-parameters" />

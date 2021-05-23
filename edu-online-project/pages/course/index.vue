@@ -16,10 +16,10 @@
             <dd class="c-s-dl-li">
               <ul class="clearfix">
                 <li>
-                  <a title="全部" href="#">全部</a>
+                  <a title="全部" href="#"  >全部</a>
                 </li>
-                <li>
-                  <a title="数据库" href="#">数据库</a>
+                <li  v-for="subject in tree" :key="subject.id" >
+                  <a :title="subject.title" href="#" v-on:click.prevent="getSubjectListQW">{{ subject.title }}</a>
                 </li>
               </ul>
             </dd>
@@ -71,7 +71,7 @@
                     />
                     <div class="cc-mask">
                       <a
-                        :href="'/course/' + record.title"
+                        :href="'/course/' + record.id"
                         title="开始学习"
                         class="comm-btn c-btn-1"
                         >开始学习</a
@@ -80,7 +80,7 @@
                   </section>
                   <h3 class="hLh30 txtOf mt10">
                     <a
-                      :href="'/course/' + record.title"
+                      :href="'/course/' + record.id"
                       :title="record.title"
                       class="course-title fsize18 c-333"
                       >{{ record.title }}</a
@@ -104,7 +104,7 @@
             <div class="clear"></div>
           </article>
         </div>
-         <!-- 公共分页 开始 -->
+        <!-- 公共分页 开始 -->
         <div class="paging">
           <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
           <a
@@ -158,17 +158,52 @@
 <script>
 import course from "@/api/course";
 export default {
+  data() {
+    return {
+      queryWarpper: {
+        subjectId: "",
+        keyWord: "",
+        //1表示最新
+        new: 0,
+        //1表示升序排列
+        priceOrder: 0,
+        //1表示关注度升序
+        hot: 0,
+      },
+      tree: [{ title: "ALG", id: 1 }],
+    };
+  },
   asyncData({ params, error }) {
     return course.getCourseListPage(1, 8).then((response) => {
       console.log(response.data.data);
       return { data: response.data.data.map };
     });
   },
+
+  created() {
+    this.getSubjectList();
+  },
+
   methods: {
     gotoPage(page) {
       course.getCourseListPage(page, 8).then((response) => {
-        this.data = response.data.data.map
+        this.data = response.data.data.map;
       });
+    },
+    getSubjectList() {
+      course.getSubjectList().then((response) => {
+        this.tree = response.data.data.node;
+      });
+      console.log(this.tree);
+    },
+    getSubjectListQW() {
+      course.getCourseListPageQueryWrapper(this.queryWarpper).then((response) => {
+        console.log(response.data.data)
+        alert("CAO!")
+        this.data = response.data.data.map
+        this.tree = this.data.records;
+      });
+      console.log(this.tree);
     },
   },
 };

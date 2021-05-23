@@ -12,4 +12,7 @@ public class TwoVideo {
     private String videoSourceId;
 
     private String videoName;
+
+    private Integer isFree;
+
 }

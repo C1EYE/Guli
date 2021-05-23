@@ -1,0 +1,12 @@
+2021-05-09 14:27:23.931 [http-nio-8002-exec-6] WARN  com.aliyun.oss - [Client]Unable to execute HTTP request: guli-c1eye.oss-cn-beijing.aliyuncs.com: nodename nor servname provided, or not known
+[ErrorCode]: UnknownHost
+[RequestId]: Unknown
+2021-05-09 14:27:24.554 [http-nio-8002-exec-6] WARN  com.aliyun.oss - [Client]Unable to execute HTTP request: guli-c1eye.oss-cn-beijing.aliyuncs.com
+[ErrorCode]: UnknownHost
+[RequestId]: Unknown
+2021-05-09 14:27:25.759 [http-nio-8002-exec-6] WARN  com.aliyun.oss - [Client]Unable to execute HTTP request: guli-c1eye.oss-cn-beijing.aliyuncs.com
+[ErrorCode]: UnknownHost
+[RequestId]: Unknown
+2021-05-09 14:27:28.164 [http-nio-8002-exec-6] WARN  com.aliyun.oss - [Client]Unable to execute HTTP request: guli-c1eye.oss-cn-beijing.aliyuncs.com
+[ErrorCode]: UnknownHost
+[RequestId]: Unknown

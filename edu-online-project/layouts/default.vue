@@ -19,12 +19,12 @@
             <router-link to="/teacher" tag="li" active-class="current">
               <a>名师</a>
             </router-link>
-            <router-link to="/article" tag="li" active-class="current">
+            <!-- <router-link to="/article" tag="li" active-class="current">
               <a>文章</a>
             </router-link>
             <router-link to="/qa" tag="li" active-class="current">
               <a>问答</a>
-            </router-link>
+            </router-link> -->
           </ul>
           <!-- / nav -->
           <ul class="h-r-login">
@@ -86,9 +86,9 @@
             <span class="fsize18 f-fM c-999">友情链接</span>
           </h4>
           <ul class="of flink-list">
-            <li>
+            <!-- <li>
               <a href="http://www.atguigu.com/" title="尚硅谷" target="_blank">尚硅谷</a>
-            </li>
+            </li> -->
           </ul>
           <div class="clear"></div>
         </div>

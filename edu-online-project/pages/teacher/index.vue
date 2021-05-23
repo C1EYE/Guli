@@ -47,10 +47,10 @@
                     >
                   </div>
                   <div class="hLh30 txtOf tac">
-                    <span class="fsize14 c-999">{{ record.intro }}</span>
+                    <span class="fsize14 c-999">{{ record.career }}</span>
                   </div>
                   <div class="mt15 i-q-txt">
-                    <p class="c-999 f-fA">{{ record.career }}</p>
+                    <p class="c-999 f-fA">{{ record.intro }}</p>
                   </div>
                 </section>
               </li>

@@ -1,0 +1,65 @@
+2021-05-10 00:56:16.805 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h26m13s726ms).
+2021-05-10 02:57:11.781 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h24s293ms).
+2021-05-10 04:58:08.608 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h26s618ms).
+2021-05-10 06:59:05.386 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h26s724ms).
+2021-05-10 07:15:06.343 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s891ms).
+2021-05-10 07:42:09.192 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m2s869ms).
+2021-05-10 08:14:06.503 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m57s291ms).
+2021-05-10 08:33:16.973 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m10s501ms).
+2021-05-10 09:59:17.048 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m29s323ms).
+2021-05-10 10:03:17.714 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m666ms).
+2021-05-10 10:18:24.684 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m6s970ms).
+2021-05-10 12:28:29.919 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s904ms).
+2021-05-10 13:02:39.701 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m33s219ms).
+2021-05-10 13:09:17.300 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m6s576ms).
+2021-05-10 13:24:08.864 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m51s564ms).
+2021-05-10 13:39:11.869 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m3s4ms).
+2021-05-10 13:54:14.863 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s995ms).
+2021-05-10 14:09:17.865 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m3s2ms).
+2021-05-10 14:24:19.863 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s998ms).
+2021-05-10 14:39:21.868 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s4ms).
+2021-05-10 14:54:22.867 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m1s).
+2021-05-10 15:09:25.862 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s995ms).
+2021-05-10 17:09:40.865 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h15s3ms).
+2021-05-10 18:05:44.211 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m3s346ms).
+2021-05-10 21:18:11.423 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m55s137ms).
+2021-05-10 21:22:47.721 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m6s280ms).
+2021-05-10 21:23:17.451 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s729ms), soft-evicting connections from pool.
+2021-05-10 21:53:21.793 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m4s343ms).
+2021-05-10 23:13:36.772 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+### The error may involve com.guli.teacher.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id,  title, sort, gmt_create, gmt_modified )  VALUES  ( ?,  ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+; Field 'course_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'course_id' doesn't have a default value]
+2021-05-10 23:18:32.959 [http-nio-8001-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+### The error may involve com.guli.teacher.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id,  title, sort, gmt_create, gmt_modified )  VALUES  ( ?,  ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+; Field 'course_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'course_id' doesn't have a default value]
+2021-05-10 23:20:08.919 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+### The error may involve com.guli.teacher.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id,  title, sort, gmt_create, gmt_modified )  VALUES  ( ?,  ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+; Field 'course_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'course_id' doesn't have a default value]
+2021-05-10 23:21:31.597 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+### The error may involve com.guli.teacher.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id,  title, sort, gmt_create, gmt_modified )  VALUES  ( ?,  ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+; Field 'course_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'course_id' doesn't have a default value]
+2021-05-10 23:24:03.532 [http-nio-8001-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+### The error may involve com.guli.teacher.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id,  title, sort, gmt_create, gmt_modified )  VALUES  ( ?,  ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+; Field 'course_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'course_id' doesn't have a default value]
+2021-05-10 23:32:48.978 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m33s522ms).
+2021-05-10 23:55:34.068 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m45s22ms).

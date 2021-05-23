@@ -8,5 +8,24 @@ export default {
       url: `${api_name}/list/${page}/${limit}`,
       method: "get"
     });
-  }
+  },
+  getCourseListPageQueryWrapper(queryWrapper){
+    return request({
+      url: `${api_name}/listWrapper`,
+      method: "post",
+      data: queryWrapper
+    })
+  },
+  getById(courseId) {
+    return request({
+        url: `${api_name}/getById/${courseId}`,
+        method: 'get'
+    })
+},
+  getSubjectList(){
+    return request({
+      url: `subject/tree`,
+      method: 'get'
+    })
+  },
 };

@@ -2,8 +2,10 @@ package com.guli.teacher.controller;
 
 
 import com.guli.common.result.Result;
+import com.guli.teacher.client.VodClient;
 import com.guli.teacher.entity.EduVideo;
 import com.guli.teacher.service.EduVideoService;
+import feign.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +24,7 @@ public class EduVideoController {
 
     @Autowired
     private EduVideoService eduVideoService;
+
 
     //保存小节
     @PostMapping("/save")

@@ -5,8 +5,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduCourse;
 import com.guli.teacher.entity.EduCourseDescription;
 import com.guli.teacher.entity.query.CourseQuery;
+import com.guli.teacher.entity.query.FrontCourseQuery;
 import com.guli.teacher.entity.vo.CoursePublishVo;
 import com.guli.teacher.entity.vo.CourseVo;
+import com.guli.teacher.entity.vo.CourseWebVo;
 import com.guli.teacher.exception.EduException;
 import com.guli.teacher.mapper.EduCourseMapper;
 import com.guli.teacher.service.EduChapterService;
@@ -225,6 +227,51 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
         return map;
 
+    }
+
+    @Override
+    public CourseWebVo getCourseInfoFrontById(String id) {
+        CourseWebVo vo = baseMapper.getCourseWebVoById(id);
+        return vo;
+    }
+
+    @Override
+    public Map<String, Object> getCourseListFrontWrapper(Page<EduCourse> eduCoursePage, FrontCourseQuery frontCourseQuery) {
+        QueryWrapper<EduCourse> eduCourseQueryWrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(frontCourseQuery.getSubjectId())) {
+            eduCourseQueryWrapper.eq("subjectId", frontCourseQuery.getSubjectId());
+        }
+        if (com.baomidou.mybatisplus.core.toolkit.StringUtils.isNotEmpty(frontCourseQuery.getKeyWord())) {
+            eduCourseQueryWrapper.like("title", frontCourseQuery.getKeyWord());
+        }
+        if (frontCourseQuery.getIsNew() != null && frontCourseQuery.getIsNew() == 1) {
+            eduCourseQueryWrapper.orderByDesc("gmtModified");
+        }
+        if (frontCourseQuery.getHot() != null && frontCourseQuery.getHot() == 1) {
+            eduCourseQueryWrapper.orderByDesc("viewCount");
+        }
+        if (frontCourseQuery.getPriceOrder() != null && frontCourseQuery.getPriceOrder() == 1) {
+            eduCourseQueryWrapper.orderByAsc("price");
+        }
+
+        baseMapper.selectPage(eduCoursePage, eduCourseQueryWrapper);
+        HashMap<String, Object> map = new HashMap<>();
+        //总记录数
+        map.put("total", eduCoursePage.getTotal());
+        //每页数据集合
+        map.put("records", eduCoursePage.getRecords());
+        //当前页
+        map.put("current", eduCoursePage.getCurrent());
+        //每页显示记录数
+        map.put("size", eduCoursePage.getSize());
+        //总页数
+        map.put("pageCount", eduCoursePage.getPages());
+        //是否有下一页
+        map.put("hasNext", eduCoursePage.hasNext());
+        //是否有上一页
+        map.put("hasPrevious", eduCoursePage.hasPrevious());
+
+        return map;
     }
 
 
